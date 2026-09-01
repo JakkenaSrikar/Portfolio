@@ -27,6 +27,57 @@ export interface ProjectDetail {
 
 export const projects: ProjectDetail[] = [
   {
+    slug: "whatsapp-ai-copilot",
+    title: "AutoChat-AI: WhatsApp Autonomous AI Agent & Copilot",
+    subtitle: "Multi-LLM Orchestration, Voice Note Transcription & Real-Time Glassmorphic Dashboard",
+    category: "Autonomous AI Agents & LLMs",
+    description: "An autonomous, self-hosted AI messaging agent and copilot for WhatsApp. Intercepts incoming messages, transcribes voice notes with Whisper, inspects images via multimodal LLMs, queues rapid message bursts, and responds with humanized typing delays using Google Gemini and Groq Llama 3.3.",
+    problem: "Traditional messaging bots feel robotic, respond instantly without natural human pacing, fail on voice notes or images, and send fragmented duplicate responses when users send multiple messages in rapid succession.",
+    solution: "Engineered an autonomous agent powered by Node.js, Puppeteer, and Socket.io that integrates multi-LLM orchestration (Groq Llama 3.3 / Google Gemini), Groq Whisper Large v3 audio transcription, an asynchronous message accumulation queue, realistic typing delay simulation, and a live glassmorphic control dashboard.",
+    technologies: ["Node.js", "Express", "Socket.io", "Puppeteer", "Google Gemini API", "Groq Cloud API", "Whisper Large v3", "Llama 3.3", "Docker", "JavaScript"],
+    githubUrl: "https://github.com/JakkenaSrikar/whatsapp-ai-copilot",
+    demoUrl: null,
+    highlight: "Autonomous Multimodal AI Agent",
+    features: [
+      "Multi-LLM dynamic routing supporting Groq (Llama 3.3 70B, Gemma 2 9B) and Google Gemini 2.5 Flash/Pro",
+      "Voice Note audio transcription using Groq Whisper Large v3 and native Gemini audio decoding",
+      "Multimodal image comprehension providing contextual visual reasoning on received photos",
+      "Message accumulation queue consolidating sequential rapid texts into unified context to prevent duplicate replies",
+      "Humanized behavior with randomized simulated typing delays (3-15s) and manual message auto-pause override",
+      "Real-time glassmorphic web dashboard with QR authentication, live WebSocket telemetry, keyword triggers, and contact whitelist"
+    ],
+    pipeline: [
+      { label: "WhatsApp Web Ingestion", description: "Puppeteer headless browser captures real-time message stream" },
+      { label: "Accumulation Buffer", description: "Debounces and aggregates rapid consecutive messages" },
+      { label: "Multimodal Parser", description: "Decodes voice notes via Whisper v3 & parses images" },
+      { label: "LLM Orchestration", description: "Routes context to Groq Llama 3.3 or Gemini Pro" },
+      { label: "Humanizer & Typing Simulator", description: "Broadcasts WhatsApp typing state with natural randomized delay" },
+      { label: "Socket.io Telemetry", description: "Pushes live logs and analytics to the glassmorphic dashboard" }
+    ],
+    dataset: "Live conversational WhatsApp messaging streams, audio voice notes (.ogg/.mp3), image attachments, and real-time Socket.io telemetry events.",
+    methodology: [
+      "Integrated whatsapp-web.js and Puppeteer to establish authenticated, persistent headless sessions with local session caching.",
+      "Engineered an asynchronous message queue that dynamically waits for consecutive messages before sending a consolidated prompt to the LLM.",
+      "Implemented a dual-LLM routing engine: Groq Cloud API for ultra-low-latency text generation and Google Gemini for native multimodal reasoning.",
+      "Developed a speech-to-text pipeline using Groq Whisper Large v3 for sub-second audio transcription.",
+      "Built a secure real-time WebSocket dashboard for live telemetry monitoring, active hours scheduling, and contact management."
+    ],
+    results: [
+      "Achieved sub-second LLM inference latency on text responses using Groq Llama 3.3.",
+      "Completely eliminated fragmented and duplicate bot replies via message accumulation buffering.",
+      "Delivered 100% private, self-hosted deployment with zero external session token leaks via Docker Compose."
+    ],
+    challenges: [
+      "Session Persistence in Headless Browsers: Resolved WhatsApp Web authentication drops by mounting persistent auth volumes and implementing auto-reconnect listeners.",
+      "Rapid Fire Messages: Solved by developing an intelligent debounced message queue that consolidates conversational context."
+    ],
+    futureScope: [
+      "Integrate vector memory retrieval (RAG) across historical personal chats for long-term relational context.",
+      "Incorporate tool-calling capabilities with Google Calendar and Notion for autonomous appointment scheduling."
+    ],
+    thumbnail: "/images/whatsapp-copilot-thumbnail.svg"
+  },
+  {
     slug: "rag-document-qa",
     title: "RAG-Based Document Q&A Chatbot",
     subtitle: "Context-Aware Document Retrieval & Multi-Step QA System",

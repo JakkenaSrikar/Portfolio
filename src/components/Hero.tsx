@@ -164,15 +164,15 @@ export default function Hero() {
                 <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-zinc-400 py-1.5 bg-zinc-900/30 px-3 rounded-lg border border-zinc-900/60 text-[11px]">
                   <div className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    <span>TensorFlow / Keras</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                    <span>OpenCV &amp; Scikit-learn</span>
+                    <span>Groq &amp; Whisper v3</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                     <span>LangChain &amp; RAG</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                    <span>TensorFlow &amp; CNNs</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
@@ -189,13 +189,19 @@ export default function Hero() {
                   <div className="flex items-center space-x-2">
                     <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                     <span className="text-zinc-300">
+                      AutoChat-AI: <strong className="text-white">Active (Groq &amp; Gemini)</strong>
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
+                    <span className="text-zinc-300">
                       RAG Q&amp;A Chatbot: <strong className="text-white">Active (ChromaDB)</strong>
                     </span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                     <span className="text-zinc-300">
-                      Brain Tumor AI: <strong className="text-white">96.0% Acc (BraTS Dataset)</strong>
+                      Brain Tumor AI: <strong className="text-white">96.0% Acc (BraTS)</strong>
                     </span>
                   </div>
                   <div className="flex items-center space-x-2">

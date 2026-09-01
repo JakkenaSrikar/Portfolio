@@ -38,6 +38,40 @@ export default async function ProjectPage(props: PageProps<"/projects/[slug]">) 
   // Render project architecture pipeline flowcharts
   const renderArchitectureDiagram = () => {
     switch (project.slug) {
+      case "whatsapp-ai-copilot":
+        return (
+          <div className="w-full py-8 px-5 bg-zinc-950 rounded-2xl border border-zinc-800/80 overflow-x-auto no-scrollbar">
+            <div className="flex flex-col md:flex-row items-center justify-between min-w-[760px] gap-3">
+              <div className="flex flex-col items-center p-3.5 bg-zinc-900 border border-zinc-800 rounded-xl w-32 text-center shadow-md">
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider font-mono">WhatsApp Web</span>
+                <span className="text-[9px] text-zinc-400 mt-1">Puppeteer Stream</span>
+              </div>
+              <div className="text-zinc-600 font-bold">➔</div>
+              <div className="flex flex-col items-center p-3.5 bg-zinc-900 border border-zinc-800 rounded-xl w-36 text-center shadow-md">
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider font-mono">Message Buffer</span>
+                <span className="text-[9px] text-zinc-400 mt-1">Debounce &amp; Accumulate</span>
+              </div>
+              <div className="text-zinc-600 font-bold">➔</div>
+              <div className="flex flex-col items-center p-3.5 bg-zinc-900 border border-zinc-800 rounded-xl w-36 text-center shadow-md border-green-500/20 bg-green-500/5">
+                <span className="text-[10px] font-bold text-green-400 uppercase tracking-wider font-mono">Whisper / Vision</span>
+                <span className="text-[9px] text-zinc-400 mt-1">Audio &amp; Image Parser</span>
+              </div>
+              <div className="text-zinc-600 font-bold">➔</div>
+              <div className="flex flex-col items-center p-3.5 bg-zinc-900 border border-zinc-800 rounded-xl w-36 text-center shadow-md border-blue-500/20 bg-blue-500/5">
+                <span className="text-[10px] font-bold text-blue-400 uppercase tracking-wider font-mono">Groq / Gemini</span>
+                <span className="text-[9px] text-zinc-400 mt-1">Llama 3.3 Routing</span>
+              </div>
+              <div className="text-zinc-600 font-bold">➔</div>
+              <div className="flex flex-col items-center p-3.5 bg-zinc-900 border border-zinc-800 rounded-xl w-36 text-center shadow-md border-purple-500/20 bg-purple-500/5">
+                <span className="text-[10px] font-bold text-purple-400 uppercase tracking-wider font-mono">Typing Simulator</span>
+                <span className="text-[9px] text-zinc-400 mt-1">Humanized Reply</span>
+              </div>
+            </div>
+            <div className="text-center text-[11px] text-zinc-500 font-mono mt-5">
+              Pipeline Flow: WhatsApp Ingestion ➔ Message Debouncing ➔ Multimodal Decoding (Whisper/Vision) ➔ Multi-LLM Routing ➔ Simulated Typing &amp; Delivery
+            </div>
+          </div>
+        );
       case "rag-document-qa":
         return (
           <div className="w-full py-8 px-5 bg-zinc-950 rounded-2xl border border-zinc-800/80 overflow-x-auto no-scrollbar">

@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" fill="none">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22"/>
+      <stop offset="50%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#021f19"/>
+    </linearGradient>
+    
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#022c22" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <linearGradient id="accent-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+
+    <linearGradient id="bubble-user" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+
+    <linearGradient id="bubble-ai" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#10b981" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bg-grad)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+
+  <!-- Ambient Glow Spheres -->
+  <circle cx="200" cy="200" r="180" fill="#10b981" fill-opacity="0.12" filter="url(#glow)"/>
+  <circle cx="1000" cy="450" r="220" fill="#059669" fill-opacity="0.1" filter="url(#glow)"/>
+
+  <!-- Main Container Card -->
+  <rect x="120" y="70" width="960" height="535" rx="24" fill="url(#card-grad)" stroke="#10b981" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- Top Header Bar -->
+  <rect x="120" y="70" width="960" height="65" rx="24" fill="#064e3b" fill-opacity="0.4"/>
+  <circle cx="160" cy="102" r="7" fill="#ef4444" opacity="0.8"/>
+  <circle cx="185" cy="102" r="7" fill="#f59e0b" opacity="0.8"/>
+  <circle cx="210" cy="102" r="7" fill="#10b981" opacity="0.8"/>
+
+  <text x="240" y="107" fill="#34d399" font-family="monospace" font-size="14" font-weight="600" letter-spacing="1">AutoChat-AI // WhatsApp Autonomous Copilot</text>
+  
+  <rect x="880" y="87" width="170" height="30" rx="15" fill="#047857" fill-opacity="0.5" stroke="#10b981" stroke-opacity="0.4"/>
+  <circle cx="900" cy="102" r="4" fill="#34d399"/>
+  <text x="912" y="106" fill="#a7f3d0" font-family="sans-serif" font-size="12" font-weight="700">AGENT ACTIVE</text>
+
+  <!-- Left: Live WhatsApp Message Simulator -->
+  <g transform="translate(160, 160)">
+    <!-- Chat App Window -->
+    <rect width="400" height="410" rx="16" fill="#030712" fill-opacity="0.8" stroke="#1f2937" stroke-width="1.5"/>
+    
+    <!-- Chat Header -->
+    <rect width="400" height="50" rx="16" fill="#0f172a" fill-opacity="0.9"/>
+    <circle cx="30" cy="25" r="14" fill="#10b981"/>
+    <text x="54" y="24" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="700">Client / Contact</text>
+    <text x="54" y="38" fill="#10b981" font-family="sans-serif" font-size="10" font-weight="600">Online • AI Copilot Engaged</text>
+
+    <!-- Message 1: Incoming Audio Voice Note -->
+    <rect x="20" y="70" width="280" height="55" rx="14" fill="url(#bubble-user)" stroke="#374151" stroke-width="1"/>
+    <circle cx="45" cy="97" r="14" fill="#10b981" fill-opacity="0.2"/>
+    <polygon points="41,91 41,103 52,97" fill="#10b981"/>
+    <line x1="70" y1="97" x2="260" y2="97" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 4"/>
+    <text x="70" y="86" fill="#9ca3af" font-family="sans-serif" font-size="10">Voice Note (0:14) • Groq Whisper</text>
+    <text x="265" y="118" fill="#6b7280" font-family="sans-serif" font-size="9">10:42 AM</text>
+
+    <!-- Message 2: Incoming Rapid Text -->
+    <rect x="20" y="140" width="300" height="42" rx="14" fill="url(#bubble-user)" stroke="#374151" stroke-width="1"/>
+    <text x="35" y="165" fill="#f3f4f6" font-family="sans-serif" font-size="12">Can you analyze the attached project report?</text>
+    <text x="285" y="174" fill="#6b7280" font-family="sans-serif" font-size="9">10:42 AM</text>
+
+    <!-- Message 3: Agent Response with Simulated Typing -->
+    <rect x="90" y="200" width="290" height="85" rx="14" fill="url(#bubble-ai)" stroke="#10b981" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="105" y="224" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="600">AutoChat-AI (Llama 3.3 / Gemini):</text>
+    <text x="105" y="244" fill="#d1fae5" font-family="sans-serif" font-size="11">I've transcribed your voice note and reviewed</text>
+    <text x="105" y="260" fill="#d1fae5" font-family="sans-serif" font-size="11">the report metrics. Here is the summary...</text>
+    <text x="345" y="276" fill="#a7f3d0" font-family="sans-serif" font-size="9">✓✓ 10:43 AM</text>
+
+    <!-- Message 4: Typing Indicator Simulation -->
+    <rect x="90" y="300" width="130" height="32" rx="12" fill="#064e3b" fill-opacity="0.6" stroke="#10b981" stroke-opacity="0.3"/>
+    <text x="105" y="320" fill="#34d399" font-family="sans-serif" font-size="10" font-weight="600">simulating typing</text>
+    <circle cx="200" cy="316" r="2" fill="#34d399"/>
+    <circle cx="206" cy="316" r="2" fill="#34d399"/>
+    <circle cx="212" cy="316" r="2" fill="#34d399"/>
+
+    <!-- Bottom Action Bar -->
+    <rect x="15" y="355" width="370" height="40" rx="10" fill="#111827"/>
+    <text x="30" y="380" fill="#6b7280" font-family="sans-serif" font-size="11">Agent listening for incoming messages...</text>
+  </g>
+
+  <!-- Right: Architecture & Tech Matrix -->
+  <g transform="translate(600, 160)">
+    <!-- Multi-LLM Orchestration Card -->
+    <rect width="440" height="110" rx="16" fill="#030712" fill-opacity="0.8" stroke="#10b981" stroke-opacity="0.2" stroke-width="1.5"/>
+    <text x="24" y="36" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="700">🧠 Multi-LLM Routing &amp; Orchestration</text>
+    <text x="24" y="62" fill="#9ca3af" font-family="sans-serif" font-size="11">Groq Llama 3.3 (70B) • Google Gemini 2.5 Flash / Pro</text>
+    <text x="24" y="84" fill="#6ee7b7" font-family="monospace" font-size="11">Sub-second inference &amp; context-aware reasoning</text>
+
+    <!-- Multimodal Vision & Audio Card -->
+    <rect y="130" width="440" height="110" rx="16" fill="#030712" fill-opacity="0.8" stroke="#10b981" stroke-opacity="0.2" stroke-width="1.5"/>
+    <text x="24" y="166" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="700">🎙️ Audio Transcription &amp; Vision Engine</text>
+    <text x="24" y="192" fill="#9ca3af" font-family="sans-serif" font-size="11">Groq Whisper Large v3 • Gemini Vision Multimodal</text>
+    <text x="24" y="214" fill="#6ee7b7" font-family="monospace" font-size="11">Instant voice message decoding &amp; image analysis</text>
+
+    <!-- Real-Time Telemetry & Puppeteer Card -->
+    <rect y="260" width="440" height="150" rx="16" fill="#030712" fill-opacity="0.8" stroke="#10b981" stroke-opacity="0.2" stroke-width="1.5"/>
+    <text x="24" y="296" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="700">⚡ Autonomous Pipeline Architecture</text>
+    <text x="24" y="322" fill="#9ca3af" font-family="sans-serif" font-size="11">Node.js • Express • Socket.io • Puppeteer • Docker</text>
+    
+    <!-- Tag Badges -->
+    <g transform="translate(24, 345)">
+      <rect x="0" y="0" width="100" height="24" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="0.8"/>
+      <text x="12" y="16" fill="#a7f3d0" font-family="sans-serif" font-size="10" font-weight="600">Message Queue</text>
+      
+      <rect x="110" y="0" width="105" height="24" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="0.8"/>
+      <text x="120" y="16" fill="#a7f3d0" font-family="sans-serif" font-size="10" font-weight="600">Typing Simulator</text>
+
+      <rect x="225" y="0" width="95" height="24" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="0.8"/>
+      <text x="235" y="16" fill="#a7f3d0" font-family="sans-serif" font-size="10" font-weight="600">QR Web Auth</text>
+      
+      <rect x="330" y="0" width="80" height="24" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="0.8"/>
+      <text x="340" y="16" fill="#a7f3d0" font-family="sans-serif" font-size="10" font-weight="600">Self-Hosted</text>
+    </g>
+  </g>
+</svg>

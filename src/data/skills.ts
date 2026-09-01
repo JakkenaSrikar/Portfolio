@@ -7,7 +7,7 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     title: "Core Programming",
-    skills: ["Python", "Java", "SQL", "JavaScript"]
+    skills: ["Python", "JavaScript", "Java", "SQL", "TypeScript"]
   },
   {
     title: "Machine Learning & Data",
@@ -19,15 +19,15 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     title: "Generative AI",
-    skills: ["LangChain", "RAG", "Embeddings", "ChromaDB", "LLM APIs"]
+    skills: ["LangChain", "RAG", "Embeddings", "ChromaDB", "Groq / Whisper", "LLM APIs"]
   },
   {
     title: "Development & Tools",
-    skills: ["Git", "GitHub", "Streamlit", "VS Code", "AWS"]
+    skills: ["Git", "GitHub", "Docker", "Streamlit", "Node.js", "VS Code", "AWS"]
   },
   {
     title: "Currently Exploring",
     isExploring: true,
-    skills: ["LangGraph", "AI Agents", "Tool-Calling", "Ollama"]
+    skills: ["LangGraph", "Multi-Agent Systems", "Tool-Calling", "Ollama"]
   }
 ];

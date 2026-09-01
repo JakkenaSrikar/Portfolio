@@ -136,11 +136,16 @@ export default function GitHub() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {projects.map((repo) => {
                 const repoName =
-                  repo.slug === "rag-document-qa"
+                  repo.slug === "whatsapp-ai-copilot"
+                    ? "whatsapp-ai-copilot"
+                    : repo.slug === "rag-document-qa"
                     ? "RAG-Document-QA-Chatbot"
                     : repo.slug === "brain-tumor-ai"
                     ? "brain-tumor-ai"
                     : "Sign-Language-Recognition-System";
+
+                const repoLanguage =
+                  repo.slug === "whatsapp-ai-copilot" ? "Node.js / JS" : "Python";
 
                 return (
                   <a
@@ -167,7 +172,7 @@ export default function GitHub() {
                     <div className="flex items-center justify-between mt-5 pt-3 border-t border-zinc-900 text-[11px] text-zinc-500 font-mono">
                       <span className="flex items-center font-semibold text-zinc-400">
                         <span className="w-2 h-2 rounded-full bg-blue-500 mr-1.5" />
-                        Python
+                        {repoLanguage}
                       </span>
                       <span className="px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-[10px] text-green-400 font-sans font-semibold">
                         {repo.highlight}
