@@ -36,7 +36,7 @@ export const projects: ProjectDetail[] = [
     solution: "Built an end-to-end RAG pipeline using LangChain and ChromaDB that extracts text from PDFs, creates dense semantic embeddings, retrieves relevant chunks via vector similarity search, and provides context-grounded answers without hallucinations.",
     technologies: ["Python", "LangChain", "ChromaDB", "Gemini API", "OpenAI API", "Streamlit", "Vector Embeddings"],
     githubUrl: "https://github.com/JakkenaSrikar/RAG-Document-QA-Chatbot",
-    demoUrl: null,
+    demoUrl: "https://rag-document-chatbot-questionandanswer.streamlit.app/",
     highlight: "Grounded Retrieval via ChromaDB",
     features: [
       "PDF upload and automated text extraction pipeline",
@@ -86,7 +86,7 @@ export const projects: ProjectDetail[] = [
     solution: "Designed a hybrid pipeline integrating U-Net for spatial segmentation, MobileNetV2 for transfer-learned feature extraction, SVM/Random Forest for 4-class classification, and Grad-CAM for visual explainability.",
     technologies: ["Python", "TensorFlow", "Keras", "MobileNetV2", "U-Net", "Grad-CAM", "SVM", "Random Forest", "Scikit-learn", "OpenCV"],
     githubUrl: "https://github.com/JakkenaSrikar/brain-tumor-ai",
-    demoUrl: null,
+    demoUrl: "https://huggingface.co/spaces/JakkenaSrikar/brain-tumor-system",
     highlight: "96% Accuracy on BraTS Dataset",
     features: [
       "Dual pipeline combining U-Net pixel-level segmentation with classification",
@@ -136,7 +136,7 @@ export const projects: ProjectDetail[] = [
     solution: "Engineered a real-time computer vision and deep learning application using OpenCV and a custom Convolutional Neural Network that captures live webcam frames, isolates hand gestures, and translates them into text with 92% accuracy.",
     technologies: ["Python", "TensorFlow", "Keras", "OpenCV", "CNN", "Computer Vision", "NumPy"],
     githubUrl: "https://github.com/JakkenaSrikar/Sign-Language-Recognition-System",
-    demoUrl: null,
+    demoUrl: "https://sign-language-recognition-system.streamlit.app/",
     highlight: "92% Real-Time Recognition Accuracy",
     features: [
       "Real-time webcam video stream capture and hand gesture processing",

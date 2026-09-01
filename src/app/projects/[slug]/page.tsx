@@ -13,7 +13,8 @@ import {
   Lightbulb,
   Layers,
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  ExternalLink
 } from "lucide-react";
 import { GithubIcon } from "@/components/UI/SocialIcons";
 import { projects } from "@/data/projects";
@@ -203,6 +204,17 @@ export default async function ProjectPage(props: PageProps<"/projects/[slug]">) 
                   {project.highlight}
                 </div>
               )}
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-1.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-all shadow-md shadow-blue-500/20 active:scale-95"
+                >
+                  <ExternalLink className="w-3.5 h-3.5 mr-1.5" />
+                  Launch Live Demo
+                </a>
+              )}
               <a
                 href={project.githubUrl}
                 target="_blank"
@@ -381,15 +393,26 @@ export default async function ProjectPage(props: PageProps<"/projects/[slug]">) 
               </div>
             </div>
 
-            {/* Footer Repository CTA */}
-            <div className="pt-8 border-t border-zinc-900 text-center">
+            {/* Footer Action CTAs */}
+            <div className="pt-8 border-t border-zinc-900 flex flex-wrap items-center justify-center gap-4">
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-xl transition-all shadow-lg hover:shadow-blue-500/20 active:scale-95"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Launch Live Application
+                </a>
+              )}
               <a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-xl transition-all shadow-lg hover:shadow-blue-500/20 active:scale-95"
+                className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-zinc-300 hover:text-white bg-zinc-900 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 rounded-xl transition-all active:scale-95"
               >
-                <GithubIcon className="w-4 h-4 mr-2" />
+                <GithubIcon className="w-4 h-4 mr-2 text-zinc-400" />
                 Explore Source Code on GitHub
               </a>
             </div>
